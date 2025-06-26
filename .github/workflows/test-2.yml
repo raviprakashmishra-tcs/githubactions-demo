@@ -13,19 +13,8 @@ jobs:
       - name: step one
         run: echo "This is the job running on ubuntu"
 
-      - name: Print Ubuntu Machine Info
-        run: |
-	  echo "Hostname: $(hostname)"
-	  echo "OS: $(uname -a)"
-
   job-two:
     runs-on: windows-latest
     steps:
       - name: step two
         run: echo "This is the job running on windows"
-
-      - name: Print Windows Machine Info
-        run: |
-	  echo "Hostname: $env:COMPUTERNAME
-	  systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
-	shell: pwsh
