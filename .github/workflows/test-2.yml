@@ -1,0 +1,20 @@
+name: hello-world2
+
+on: push
+#on:
+ # push:
+  #  branches:
+   #   - test-2
+
+jobs:
+  job-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step one
+        run: echo "This is the job running on ubuntu"
+
+  job-two:
+    runs-on: windows-latest
+    steps:
+      - name: step two
+        run: echo "This is the job running on windows"
